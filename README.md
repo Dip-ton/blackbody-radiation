@@ -38,7 +38,7 @@ $$
 Averaging over the Boltzmann distribution $P_n \propto e^{-E_n/k_B T}$ gives
 
 $$
-\langle E \rangle = \frac{\sum_n n h\nu\, e^{-n h\nu / k_B T}}{\sum_n e^{-n h\nu / k_B T}} = \frac{h\nu}{e^{h\nu/k_B T} - 1}.
+\langle E \rangle = \frac{\sum_n n h\nu  e^{-n h\nu / k_B T}}{\sum_n e^{-n h\nu / k_B T}} = \frac{h\nu}{e^{h\nu/k_B T} - 1}.
 $$
 
 For $h\nu \ll k_B T$ this reduces to $k_B T$ (the classical limit). For $h\nu \gg k_B T$ high-frequency modes are exponentially suppressed, which removes the divergence. The spectral energy density is
