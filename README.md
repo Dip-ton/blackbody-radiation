@@ -61,7 +61,7 @@ $$
 The total power emitted per unit area (radiant exitance) is obtained by integrating over frequency and over the outgoing hemisphere (a factor of $\pi$ for a Lambertian emitter):
 
 $$
-M(T) = \pi \int_0^\infty B_\nu(T)\, d\nu = \sigma T^4 ,
+M(T) = \pi \int_0^\infty B_\nu(T)  d\nu = \sigma T^4 ,
 $$
 
 where, with the substitution $x = h\nu/k_B T$ and $\int_0^\infty \frac{x^3}{e^x - 1}dx = \frac{\pi^4}{15}$,
