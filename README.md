@@ -16,13 +16,13 @@ The aim is to see how a single microscopic assumption, discrete energy exchange,
 Treat radiation in a cavity of volume $V$ at temperature $T$ as a gas of standing electromagnetic modes. The number of modes per unit frequency (two polarizations) is
 
 $$
-g(\nu)\d\nu = \frac{8\pi \nu^2}{c^3}\V\d\nu .
+g(\nu)\,d\nu = \frac{8\pi \nu^2}{c^3}\,V\,d\nu .
 $$
 
 Classical equipartition assigns each mode an average energy $\langle E \rangle = k_B T$, giving the **Rayleigh-Jeans law**
 
 $$
-u_\nu^{\text{RJ}} = \frac{8\pi \nu^2}{c^3}\k_B T .
+u_\nu^{\text{RJ}} = \frac{8\pi \nu^2}{c^3}\,k_B T .
 $$
 
 This grows as $\nu^2$, so the total energy density $\int_0^\infty u_\nu\, d\nu$ diverges. This failure at high frequency is the *ultraviolet catastrophe*.
@@ -38,13 +38,13 @@ $$
 Averaging over the Boltzmann distribution $P_n \propto e^{-E_n/k_B T}$ gives
 
 $$
-\langle E \rangle = \frac{\sum_n n h\nu\ e^{-n h\nu / k_B T}}{\sum_n e^{-n h\nu / k_B T}} = \frac{h\nu}{e^{h\nu/k_B T} - 1}.
+\langle E \rangle = \frac{\sum_n n h\nu\, e^{-n h\nu / k_B T}}{\sum_n e^{-n h\nu / k_B T}} = \frac{h\nu}{e^{h\nu/k_B T} - 1}.
 $$
 
 For $h\nu \ll k_B T$ this reduces to $k_B T$ (the classical limit). For $h\nu \gg k_B T$ high-frequency modes are exponentially suppressed, which removes the divergence. The spectral energy density is
 
 $$
-u_\nu(T) = \frac{8\pi h \nu^3}{c^3}\\frac{1}{e^{h\nu/k_B T} - 1}.
+u_\nu(T) = \frac{8\pi h \nu^3}{c^3}\,\frac{1}{e^{h\nu/k_B T} - 1}.
 $$
 
 ### 1.3 Spectral radiance (what the code computes)
@@ -52,8 +52,8 @@ $$
 The spectral radiance of a blackbody is
 
 $$
-B_\nu(T) = \frac{c}{4\pi}\u_\nu = \frac{2 h \nu^3}{c^2}\\frac{1}{e^{h\nu/k_B T} - 1}
-\qquad [\text{W}\\text{m}^{-2}\\text{sr}^{-1}\\text{Hz}^{-1}].
+B_\nu(T) = \frac{c}{4\pi}\,u_\nu = \frac{2 h \nu^3}{c^2}\,\frac{1}{e^{h\nu/k_B T} - 1}
+\qquad [\text{W}\,\text{m}^{-2}\,\text{sr}^{-1}\,\text{Hz}^{-1}].
 $$
 
 ### 1.4 Stefan-Boltzmann law
@@ -61,13 +61,13 @@ $$
 The total power emitted per unit area (radiant exitance) is obtained by integrating over frequency and over the outgoing hemisphere (a factor of $\pi$ for a Lambertian emitter):
 
 $$
-M(T) = \pi \int_0^\infty B_\nu(T)\ d\nu = \sigma T^4 ,
+M(T) = \pi \int_0^\infty B_\nu(T)\, d\nu = \sigma T^4 ,
 $$
 
 where, with the substitution $x = h\nu/k_B T$ and $\int_0^\infty \frac{x^3}{e^x - 1}dx = \frac{\pi^4}{15}$,
 
 $$
-\sigma = \frac{2\pi^5 k_B^4}{15\ c^2 h^3} \approx 5.670374 \times 10^{-8}\ \text{W}\\text{m}^{-2}\\text{K}^{-4}.
+\sigma = \frac{2\pi^5 k_B^4}{15\, c^2 h^3} \approx 5.670374 \times 10^{-8}\ \text{W}\,\text{m}^{-2}\,\text{K}^{-4}.
 $$
 
 On a log-log plot, $\ln M = \ln\sigma + 4\ln T$ is a straight line of slope 4 and intercept $\ln \sigma$.
@@ -77,13 +77,13 @@ On a log-log plot, $\ln M = \ln\sigma + 4\ln T$ is a straight line of slope 4 an
 Setting $\partial B_\nu / \partial \nu = 0$ and writing $x = h\nu/k_B T$ leads to the transcendental equation
 
 $$
-(3 - x)\e^{x} = 3 \quad\Rightarrow\quad x \approx 2.821439,
+(3 - x)\,e^{x} = 3 \quad\Rightarrow\quad x \approx 2.821439,
 $$
 
 so
 
 $$
-\nu_{\max} = \frac{2.821439\, k_B}{h}\ T \approx 5.879 \times 10^{10}\ \text{Hz}\\text{K}^{-1} \cdot T .
+\nu_{\max} = \frac{2.821439\, k_B}{h}\, T \approx 5.879 \times 10^{10}\ \text{Hz}\,\text{K}^{-1} \cdot T .
 $$
 
 The peak frequency scales linearly with temperature.
@@ -97,7 +97,7 @@ The peak frequency scales linearly with temperature.
 `blackbody_radiation.py` performs three tasks:
 
 1. **Planck spectrum.** Evaluates $B_\nu(T)$ on a frequency grid for $T = 1000, 2000, 3000, 4000, 5000$ K and plots all curves.
-2. **Stefan-Boltzmann verification.** Integrates each curve numerically (trapezoidal rule) to get $M(T) = \pi\int B_\nu\ d\nu$, checks that $M/T^4$ is constant, and fits $\ln M$ against $\ln T$ to extract the exponent and $\sigma$.
+2. **Stefan-Boltzmann verification.** Integrates each curve numerically (trapezoidal rule) to get $M(T) = \pi\int B_\nu\, d\nu$, checks that $M/T^4$ is constant, and fits $\ln M$ against $\ln T$ to extract the exponent and $\sigma$.
 3. **Wien verification.** Locates the peak frequency $\nu_{\max}$ of each curve, checks that $\nu_{\max}/T$ is constant, and fits $\nu_{\max}$ against $T$ to extract the displacement constant.
 
 ### Numerical setup
