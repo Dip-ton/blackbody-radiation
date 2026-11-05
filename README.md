@@ -16,13 +16,13 @@ The aim is to see how a single microscopic assumption, discrete energy exchange,
 Treat radiation in a cavity of volume $V$ at temperature $T$ as a gas of standing electromagnetic modes. The number of modes per unit frequency (two polarizations) is
 
 $$
-g(\nu)\,d\nu = \frac{8\pi \nu^2}{c^3}\,V\,d\nu .
+g(\nu) d\nu = \frac{8\pi \nu^2}{c^3} V d\nu .
 $$
 
 Classical equipartition assigns each mode an average energy $\langle E \rangle = k_B T$, giving the **Rayleigh-Jeans law**
 
 $$
-u_\nu^{\text{RJ}} = \frac{8\pi \nu^2}{c^3}\,k_B T .
+u_\nu^{\text{RJ}} = \frac{8\pi \nu^2}{c^3} k_B T .
 $$
 
 This grows as $\nu^2$, so the total energy density $\int_0^\infty u_\nu\, d\nu$ diverges. This failure at high frequency is the *ultraviolet catastrophe*.
@@ -52,7 +52,7 @@ $$
 The spectral radiance of a blackbody is
 
 $$
-B_\nu(T) = \frac{c}{4\pi}\,u_\nu = \frac{2 h \nu^3}{c^2}\,\frac{1}{e^{h\nu/k_B T} - 1}
+B_\nu(T) = \frac{c}{4\pi} u_\nu = \frac{2 h \nu^3}{c^2}\,\frac{1}{e^{h\nu/k_B T} - 1}
 \qquad [\text{W}\,\text{m}^{-2}\,\text{sr}^{-1}\,\text{Hz}^{-1}].
 $$
 
@@ -77,7 +77,7 @@ On a log-log plot, $\ln M = \ln\sigma + 4\ln T$ is a straight line of slope 4 an
 Setting $\partial B_\nu / \partial \nu = 0$ and writing $x = h\nu/k_B T$ leads to the transcendental equation
 
 $$
-(3 - x)\,e^{x} = 3 \quad\Rightarrow\quad x \approx 2.821439,
+(3 - x) e^{x} = 3 \quad\Rightarrow\quad x \approx 2.821439,
 $$
 
 so
