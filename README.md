@@ -229,6 +229,6 @@ Commercial use, commercial redistribution and incorporation into commercial prod
 
 Please preserve the original copyright and licensing notices when redistributing this software.
 
-See the [LICENSE](LICENSE) file for the complete terms. If this summary and the LICENSE file differ, the LICENSE file governs.
+See the [LICENSE](LICENSE.md) file for the complete terms. If this summary and the LICENSE file differ, the LICENSE file governs.
 
 Copyright (c) 2026 Anik Khan
