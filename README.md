@@ -67,7 +67,7 @@ $$
 where, with the substitution $x = h\nu/k_B T$ and $\int_0^\infty \frac{x^3}{e^x - 1}dx = \frac{\pi^4}{15}$,
 
 $$
-\sigma = \frac{2\pi^5 k_B^4}{15\, c^2 h^3} \approx 5.670374 \times 10^{-8}\ \text{W}\text{m}^{-2}\text{K}^{-4}.
+\sigma = \frac{2\pi^5 k_B^4}{15\ c^2 h^3} \approx 5.670374 \times 10^{-8}\ \text{W}\text{m}^{-2}\text{K}^{-4}.
 $$
 
 On a log-log plot, $\ln M = \ln\sigma + 4\ln T$ is a straight line of slope 4 and intercept $\ln \sigma$.
@@ -83,7 +83,7 @@ $$
 so
 
 $$
-\nu_{\max} = \frac{2.821439\, k_B}{h}  T \approx 5.879 \times 10^{10}\ \text{Hz}\text{K}^{-1} \cdot T .
+\nu_{\max} = \frac{2.821439\ k_B}{h}  T \approx 5.879 \times 10^{10}\ \text{Hz}\text{K}^{-1} \cdot T .
 $$
 
 The peak frequency scales linearly with temperature.
