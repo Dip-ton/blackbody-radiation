@@ -147,7 +147,7 @@ Log-log fit: exponent $= 3.9999$, $\sigma_{\text{fit}} = 5.6703\times10^{-8}$ W 
 | 4000 | $2.352\times10^{14}$ | $5.879\times10^{10}$ |
 | 5000 | $2.940\times10^{14}$ | $5.879\times10^{10}$ |
 
-Linear fit slope $\approx 5.879\times10^{10}$ Hz K⁻¹, matching the theoretical $2.8214\,k_B/h$. The small scatter in $\nu_{\max}/T$ comes from the finite frequency grid spacing ($\Delta\nu = 3\times10^{10}$ Hz).
+Linear fit slope $\approx 5.879\times10^{10}$ Hz K⁻¹, matching the theoretical $2.8214 k_B/h$. The small scatter in $\nu_{\max}/T$ comes from the finite frequency grid spacing ($\Delta\nu = 3\times10^{10}$ Hz).
 
 ---
 
